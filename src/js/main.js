@@ -3,12 +3,12 @@ import { initialCards } from '../init/cards.js';
 function createCards(item) {
   const cardTemplate = document.getElementById("card-template").content.querySelector(".col").cloneNode(true);
   cardTemplate.querySelector(".name").textContent = item.name;
+  cardTemplate.querySelector(".about").textContent = item.about;
   cardTemplate.querySelector('.slide').id = item.id
   cardTemplate.querySelector('.carousel-control-prev').href = "#" + item.id
   cardTemplate.querySelector('.carousel-control-next').href = "#" + item.id
   cardTemplate.querySelectorAll('#buttonSlide').forEach((el) => {
     el.href = "#" + item.id;
-
   })
 
   const link1 = cardTemplate.querySelector(".link1")
@@ -51,3 +51,33 @@ function rendererCard(items) {
 }
 
 rendererCard(initialCards)
+
+const inputSearch = document.querySelector(".input-search")
+const buttonSearch = document.querySelector("#button-search")
+let searchCard = []
+
+function search(items, search) {
+  const filt = items.filter(el => {console.log(el.name + el.about)
+    return (el.name + el.about).toLowerCase().trim().includes(search.value.toLowerCase().trim());
+  })
+  searchCard = filt
+  console.log(filt)
+}
+inputSearch.addEventListener("keydown", (e) => {
+
+  if (e.keyCode === 13) {
+    e.preventDefault();
+    search(initialCards, inputSearch)
+    document.querySelectorAll("#cards").forEach((el) => { el.remove("cards") })
+    rendererCard(searchCard)
+
+  }
+
+})
+buttonSearch.addEventListener("click", () => {
+  // e.preventDefault();
+  search(initialCards, inputSearch)
+  document.querySelectorAll("#cards").forEach((el) => { el.remove("cards") })
+  rendererCard(searchCard)
+
+})

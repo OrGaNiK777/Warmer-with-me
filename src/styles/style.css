@@ -123,7 +123,8 @@ ul.contact_icons {
 	max-width: 430px;
 }
 
-.name {
+.name,
+.about {
 	font-family: 'Poiret One', sans-serif;
 	font-size: 14px;
 }
