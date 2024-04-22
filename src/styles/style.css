@@ -38,6 +38,14 @@ a:hover {
 	color: var(--bs-blue);
 }
 
+.btn-close:focus {
+	box-shadow: none;
+}
+
+.btn-close-hidden {
+	display: none;
+}
+
 .header {
 	background-color: #f3f1f6;
 	position: sticky;
@@ -103,6 +111,11 @@ ul.contact_icons {
 
 .input-search:focus {
 	box-shadow: none;
+	background-color: #f3f1f6;
+}
+
+.button-remove-search {
+	margin-right: 15px;
 }
 
 .badge {
@@ -171,4 +184,15 @@ ul.contact_icons {
 .main {
 	margin-top: 10px;
 	padding-bottom: 15px;
+}
+
+.cardModal {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cardModal button {
+	position: absolute;
+	right: 45px;
+	top: 20px;
 }

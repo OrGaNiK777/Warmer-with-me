@@ -46,6 +46,7 @@
 								<form>
 									<div class="input-group" style="margin-bottom: 5px; border-bottom: solid var(--bs-purple) 1px">
 										<input type="text" class="form-control input-search" placeholder="Поиск..." aria-label="Поиск..." aria-describedby="button-search" />
+										<button type="button" class="btn-close button-remove-search btn-close-hidden"></button>
 										<button type="button" class="btn" id="button-search" style="padding: 0">
 											<i class="fa-solid fa-magnifying-glass"></i>
 										</button>
@@ -55,27 +56,9 @@
 						</div>
 					</div>
 				</div>
-				<div style="transition: all 0.3s" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel1">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasExampleLabel">Избранное</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
-						<div>Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</div>
-					</div>
-				</div>
-				<div style="transition: all 0.3s" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel2">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasExampleLabel">Корзина</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
-						<div>Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</div>
-					</div>
-				</div>
 			</header>
 			<main class="main">
-				<div class="row row-cols-1 row-cols-md-1 g-4 cards"></div>
+				<div class="cards-list row row-cols-1 row-cols-md-1 g-4"></div>
 			</main>
 			<template id="card-template">
 				<div id="cards" class="col d-flex justify-content-center">
@@ -118,11 +101,9 @@
 			<div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<div style="background-color: rgba(0, 0, 0, 0); border: none" class="modal-content">
-						<div class="modal-header" style="border: none">
+						<div class="cardModal">
 							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="card">
-							<img src="..." class="zoomImg card-img-top" alt="..." />
+							<img style="max-width: 450px" src="..." class="zoomImg card-img-top" alt="..." />
 						</div>
 					</div>
 				</div>

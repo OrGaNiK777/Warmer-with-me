@@ -1,5 +1,45 @@
 import { initialCards } from '../init/cards.js';
 
+const inputSearch = document.querySelector(".input-search")
+const buttonSearch = document.querySelector("#button-search")
+const buttonRemoveSearch = document.querySelector(".button-remove-search")
+let searchCard = []
+
+function search(items, search) {
+  const filt = items.filter(el => {
+    return (el.name + " " + el.about).toLowerCase().trim().
+      includes(search.value.toLowerCase().trim());
+  })
+  searchCard = filt
+}
+
+buttonRemoveSearch.addEventListener("click", () => {
+  inputSearch.value = ""
+  buttonRemoveSearch.classList.add("btn-close-hidden")
+  removeAllCards()
+  rendererCard(initialCards)
+})
+
+inputSearch.addEventListener("keydown", (e) => {
+  buttonRemoveSearch.classList.remove("btn-close-hidden")
+  if (e.keyCode === 13) {
+    e.preventDefault();
+    search(initialCards, inputSearch)
+    removeAllCards()
+    rendererCard(searchCard)
+  }
+})
+
+buttonSearch.addEventListener("click", () => {
+  search(initialCards, inputSearch)
+  removeAllCards()
+  rendererCard(searchCard)
+})
+
+function removeAllCards() {
+  document.querySelectorAll("#cards").forEach((el) => { el.remove("cards") })
+}
+
 function createCards(item) {
   const cardTemplate = document.getElementById("card-template").content.querySelector(".col").cloneNode(true);
   cardTemplate.querySelector(".name").textContent = item.name;
@@ -46,38 +86,8 @@ function createCards(item) {
 
 function rendererCard(items) {
   items.forEach((item) => {
-    document.querySelector(".cards").append(createCards(item));
+    document.querySelector(".cards-list").append(createCards(item));
   });
 }
 
 rendererCard(initialCards)
-
-const inputSearch = document.querySelector(".input-search")
-const buttonSearch = document.querySelector("#button-search")
-let searchCard = []
-
-function search(items, search) {
-  const filt = items.filter(el => {console.log(el.name + el.about)
-    return (el.name + el.about).toLowerCase().trim().includes(search.value.toLowerCase().trim());
-  })
-  searchCard = filt
-  console.log(filt)
-}
-inputSearch.addEventListener("keydown", (e) => {
-
-  if (e.keyCode === 13) {
-    e.preventDefault();
-    search(initialCards, inputSearch)
-    document.querySelectorAll("#cards").forEach((el) => { el.remove("cards") })
-    rendererCard(searchCard)
-
-  }
-
-})
-buttonSearch.addEventListener("click", () => {
-  // e.preventDefault();
-  search(initialCards, inputSearch)
-  document.querySelectorAll("#cards").forEach((el) => { el.remove("cards") })
-  rendererCard(searchCard)
-
-})
