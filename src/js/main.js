@@ -14,8 +14,6 @@ function createCards(item) {
   const link1 = cardTemplate.querySelector(".link1")
   const link2 = cardTemplate.querySelector(".link2")
   const link3 = cardTemplate.querySelector(".link3")
-  const link4 = cardTemplate.querySelector(".link4")
-  const link5 = cardTemplate.querySelector(".link5")
   const zoomImg = document.querySelector(".zoomImg")
 
   if (item.link1) {
@@ -31,15 +29,6 @@ function createCards(item) {
     link3.alt = item.name;
   }
 
-  // if (item.link4) {
-  //   link3.src = item.link4;
-  //   link3.alt = item.name;
-  // }
-  // if (item.link4) {
-  //   link3.src = item.link4;
-  //   link3.alt = item.name;
-  // }
-
   link1.addEventListener("mousedown", () => {
     zoomImg.src = item.link1
   })
@@ -49,12 +38,6 @@ function createCards(item) {
   link3.addEventListener("mousedown", () => {
     zoomImg.src = item.link3
   })
-  // link4.addEventListener("mousedown", () => {
-  //   zoomImg.src = item.link4
-  // })
-  // link5.addEventListener("mousedown", () => {
-  //   zoomImg.src = item.link5
-  // })
 
   if (item.price) { cardTemplate.querySelectorAll(".price").forEach((el) => { el.textContent = "Цена: " + item.price + " руб."; }) }
   else { cardTemplate.querySelectorAll(".price").forEach((el) => { el.textContent = "Цена: Узнать лично" }) }
