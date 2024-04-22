@@ -6,7 +6,7 @@ export const initialCards = [
     link1: "././img/11.jpg",
     link2: "././img/12.jpg",
     link3: "././img/13.jpg",
-    // video: $`<iframe src="https://vk.com/video_ext.php?oid=-211385859&id=456239053&hash=46deefcffad19ac2" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`,
+    // video: "https://vk.com/video_ext.php?oid=-211385859&id=456239053&hash=46deefcffad19ac2",
     price: 7100,
     id: "wdqw332232e23qwe3e2"
   },
