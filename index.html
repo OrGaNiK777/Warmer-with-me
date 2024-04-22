@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./src/styles/style.css" />
+		<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Satisfy&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://libs.cdnjs.net/font-awesome/6.5.2/css/all.css" />
+		<title>Warmer with me</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header-top">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-4 col-6">
+								<a class="header_logo" href="/"><h1 class="header_logo_text">Warmer with me</h1></a>
+							</div>
+							<div class="col-md-4 d-none d-md-block">
+								<ul class="contact_icons">
+									<li>
+										<a href="https://www.instagram.com/_busygina_yulia_/"><i class="fa-brands fa-square-instagram"></i></a>
+									</li>
+									<li>
+										<a href="https://vk.com/warmerwithme"><i class="fa-brands fa-vk"></i></a>
+									</li>
+									<li>
+										<a href="tel:+79043885539"><i class="fa-solid fa-square-phone"></i></a>
+									</li>
+									<li>
+										<a href="https://wa.me/+79043885539"><i class="fa-brands fa-square-whatsapp"></i></a>
+									</li>
+								</ul>
+							</div>
+							<div class="group col-md-4 col-6">
+								<div class="btn-group d-block d-md-none">
+									<button type="button" class="btn btn-secondary dropdown-toggle" style="background: none; border: none" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+									<ul class="dropdown-menu dropdown-menu-end">
+										<li><button class="dropdown-item btn" type="button">Войти</button></li>
+										<li><button class="dropdown-item btn" type="button">Регистрация</button></li>
+										<div class="text-start">
+											<button class="btn position-relative">
+												<span class="position-absolute top-0 end-0 translate-end badge rounded-pill bg-danger">
+													9
+													<span class="visually-hidden">unread messages</span>
+												</span>
+												<i class="fa-solid fa-heart"> </i>
+											</button>
+											<button class="btn position-relative">
+												<span class="position-absolute top-0 end-0 translate-end badge rounded-pill bg-danger">
+													9
+													<span class="visually-hidden">unread messages</span>
+												</span>
+												<i class="fa-solid fa-basket-shopping"> </i>
+											</button>
+										</div>
+										<ul class="contact_icons">
+											<li>
+												<a href="https://www.instagram.com/_busygina_yulia_/"><i class="fa-brands fa-square-instagram"></i></a>
+											</li>
+											<li>
+												<a href="https://vk.com/warmerwithme"><i class="fa-brands fa-vk"></i></a>
+											</li>
+											<li>
+												<a href="tel:+79043885539"><i class="fa-solid fa-square-phone"></i></a>
+											</li>
+											<li>
+												<a href="https://wa.me/+79043885539"><i class="fa-brands fa-square-whatsapp"></i></a>
+											</li>
+										</ul>
+									</ul>
+								</div>
+								<div class="d-none d-md-block">
+									<button type="button" class="btn">Войти</button>
+									<button type="button" class="btn">Регистрация</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-search">
+					<div class="container-fluid">
+						<div class="row flex-nowrap">
+							<div class="col-12 col-md-10">
+								<form>
+									<div class="input-group" style="margin-bottom: 5px; border-bottom: solid var(--bs-purple) 1px">
+										<input type="text" class="form-control input-search" placeholder="Поиск..." aria-label="Поиск..." aria-describedby="button-search" />
+										<button type="button" style="border: none; background-color: white" class="btn" id="button-search">
+											<i class="fa-solid fa-magnifying-glass"></i>
+										</button>
+									</div>
+								</form>
+							</div>
+							<div class="col-2 text-end d-none d-md-block">
+								<button type="button" class="btn position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample1" aria-controls="offcanvasExample1">
+									<span class="position-absolute top-0 end-0 translate-end badge rounded-pill bg-danger">
+										9
+										<span class="visually-hidden">unread messages</span>
+									</span>
+									<i class="fa-solid fa-heart"> </i>
+								</button>
+								<button type="button" class="btn position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
+									<span class="position-absolute top-0 end-0 translate-end badge rounded-pill bg-danger">
+										9
+										<span class="visually-hidden">unread messages</span>
+									</span>
+									<i class="fa-solid fa-basket-shopping"> </i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="transition: all 0.3s" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel1">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasExampleLabel">Избранное</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<div>Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</div>
+					</div>
+				</div>
+				<div style="transition: all 0.3s" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel2">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasExampleLabel">Корзина</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<div>Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<div class="row row-cols-1 row-cols-md-1 g-4 cards"></div>
+			</main>
+			<template id="card-template">
+				<div class="col d-flex justify-content-center">
+					<div class="card">
+						<div id="carouselExampleIndicators" class="carousel slide">
+							<div class="carousel-indicators">
+								<a id="buttonSlide" type="button" href="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></a>
+								<a id="buttonSlide" type="button" href="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></a>
+								<a id="buttonSlide" type="button" href="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></a>
+							</div>
+							<a id="buttonModal" href="#staticBackdrop" type="button" data-bs-toggle="modal">
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img type="button" src="..." class="link link1 d-block w-100" alt="..." />
+									</div>
+									<div class="carousel-item">
+										<img type="button" src="..." class="link2 d-block w-100" alt="..." />
+									</div>
+									<div class="carousel-item">
+										<img type="button" src="..." class="link3 d-block w-100" alt="..." />
+									</div></div
+							></a>
+							<a class="carousel-control-prev" type="button" href="#carouselExampleIndicators" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</a>
+							<a class="carousel-control-next" type="button" href="#carouselExampleIndicators" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</a>
+						</div>
+						<div class="card-body">
+							<h5 class="name card-title"></h5>
+							<p class="price card-text">...</p>
+						</div>
+					</div>
+				</div>
+			</template>
+			<div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div style="background-color: rgba(0, 0, 0, 0); border: none" class="modal-content">
+						<div class="modal-header" style="border: none">
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="card">
+							<img src="..." class="zoomImg card-img-top" alt="..." />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script type="module" defer="defer" src="./src/js/main.js"></script>
+	</body>
+</html>

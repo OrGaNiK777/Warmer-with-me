@@ -1,0 +1,147 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	box-sizing: border-box;
+	min-width: 320px;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	margin-right: 5px;
+	text-decoration: none;
+	color: var(--bs-purple);
+	transition: all 0.3s;
+}
+
+a:hover {
+	color: var(--bs-blue);
+}
+
+.row {
+	align-items: center;
+}
+
+.btn {
+	transition: all 0.3s;
+	color: var(--bs-purple);
+}
+
+.btn:hover {
+	color: var(--bs-blue);
+}
+
+.header {
+	background-color: rgb(210, 210, 210);
+	position: sticky;
+	top: 0px;
+	z-index: 100;
+}
+
+.header_logo {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+.header_logo_text {
+	font-family: 'Poiret One', sans-serif;
+	font-weight: 900;
+	font-size: 32px;
+	min-width: 270px;
+	margin: 0;
+}
+
+.header-contact {
+	display: flex;
+	flex-direction: row;
+}
+
+li {
+	height: auto;
+}
+
+ul.contact_icons {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	height: 28px;
+}
+
+.group {
+	display: flex;
+	justify-content: end;
+}
+
+.input-search {
+	transition: all 0.3s;
+	border: none;
+}
+
+.input-search:focus {
+	box-shadow: none;
+}
+
+.badge {
+	font-size: 0.4rem;
+}
+
+.card {
+	border: none;
+	border-radius: 0;
+	background-color: #f3f1f6;
+	max-width: 600px;
+}
+
+.carousel-item img {
+	border-radius: 0;
+	object-fit: contain;
+	max-height: 800px;
+	max-width: 600px;
+}
+
+.name {
+	font-family: 'Poiret One', sans-serif;
+	font-size: 14px;
+}
+
+.price {
+	font-family: 'Poiret One', sans-serif;
+	font-size: 12px;
+	color: rgb(136, 136, 136);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+	background-color: var(--bs-purple);
+}
+
+.carousel-indicators a {
+	box-sizing: content-box;
+	flex: 0 1 auto;
+	width: 30px;
+	height: 5px;
+	padding: 0;
+	margin-right: 3px;
+	margin-left: 3px;
+	text-indent: -999px;
+	cursor: pointer;
+	background-color: var(--bs-purple);
+	background-clip: padding-box;
+	border: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	opacity: 0.5;
+	transition: opacity 0.6s ease;
+}
+
+.main {
+	margin-top: 10px;
+	padding-bottom: 15px;
+}
