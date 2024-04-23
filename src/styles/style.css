@@ -68,7 +68,7 @@ a:hover {
 	margin: 0;
 }
 
-@media screen and (width < 360px) {
+@media screen and (width < 420px) {
 	.header_logo_h1 {
 		font-size: 22px;
 	}
@@ -129,18 +129,21 @@ ul.contact_icons {
 	max-width: 430px;
 }
 
-.carousel-item img {
-	border-radius: 0;
-	object-fit: contain;
-	max-height: 550px;
-	max-width: 430px;
+.carousel-item div {
+	height: 550px;
+	width: 430px;
 }
 
-.video-slide {
+.carousel-item img {
+	object-fit: contain;
+	border-radius: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .name,
-.about {
+.about,
+.description {
 	font-family: 'Poiret One', sans-serif;
 	font-size: 14px;
 }
