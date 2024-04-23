@@ -57,27 +57,42 @@ function createCards(item) {
   const link3 = cardTemplate.querySelector(".link3")
   const link4 = cardTemplate.querySelector(".link4")
   const videoSlide = cardTemplate.querySelector(".video-slide")
+  const carouselItem1 = cardTemplate.querySelector(".carousel-item1")
+  const carouselItem2 = cardTemplate.querySelector(".carousel-item2")
+  const carouselItem3 = cardTemplate.querySelector(".carousel-item3")
+  const carouselItem4 = cardTemplate.querySelector(".carousel-item4")
+  const carouselItem5 = cardTemplate.querySelector(".carousel-item5")
   const zoomImg = document.querySelector(".zoomImg")
 
   if (item.link1) {
     link1.src = item.link1;
     link1.alt = item.name;
-  } else { }
+  } else {
+    carouselItem1.remove("carousel-item1")
+  }
   if (item.link2) {
     link2.src = item.link2;
     link2.alt = item.name;
-  } else { }
+  } else {
+    carouselItem2.remove("carousel-item2")
+  }
   if (item.link3) {
     link3.src = item.link3;
     link3.alt = item.name;
-  } else { }
+  } else {
+    carouselItem3.remove("carousel-item3")
+  }
   if (item.link4) {
-    link3.src = item.link4;
-    link3.alt = item.name;
-  } else { }
+    link4.src = item.link4;
+    link4.alt = item.name;
+  } else {
+    carouselItem4.remove("carousel-item4")
+  }
   if (item.video) {
     videoSlide.src = item.video
-  } else { }
+  } else {
+    carouselItem5.remove("carousel-item5")
+  }
 
   link1.addEventListener("mousedown", () => {
     zoomImg.src = item.link1
