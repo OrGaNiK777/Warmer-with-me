@@ -68,12 +68,20 @@ a:hover {
 	margin: 0;
 }
 
-@media screen and (width < 420px) {
+@media screen and (width < 500px) {
 	.header_logo_h1 {
 		font-size: 22px;
 	}
 	.header_logo_h2 {
 		font-size: 10px;
+	}
+	.carousel-item div {
+		height: 350px;
+		width: 300px;
+	}
+	.carousel-control-next,
+	.carousel-control-prev {
+		max-height: 350px;
 	}
 }
 
@@ -128,10 +136,15 @@ ul.contact_icons {
 	background-color: #f3f1f6;
 	max-width: 430px;
 }
-
-.carousel-item div {
-	height: 550px;
-	width: 430px;
+@media screen and (width > 500px) {
+	.carousel-item div {
+		height: 550px;
+		width: 430px;
+	}
+	.carousel-control-next,
+	.carousel-control-prev {
+		max-height: 550px;
+	}
 }
 
 .carousel-item img {
@@ -157,10 +170,6 @@ ul.contact_icons {
 .carousel {
 	margin-left: auto;
 	margin-right: auto;
-}
-.carousel-control-next,
-.carousel-control-prev {
-	max-height: 500px;
 }
 
 .carousel-control-next-icon,
@@ -199,6 +208,6 @@ ul.contact_icons {
 
 .cardModal button {
 	position: absolute;
-	right: 45px;
+	right: 20px;
 	top: 20px;
 }
