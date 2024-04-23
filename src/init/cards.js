@@ -8,6 +8,7 @@ export const initialCards = [
     link3: "././img/13.jpg",
     video: "https://vk.com/video_ext.php?oid=-211385859&id=456239053&hash=46deefcffad19ac2",
     price: 7100,
+    status: "В наличии",
     id: "wdqw332232e23qwe3e2"
   },
   {
@@ -19,6 +20,7 @@ export const initialCards = [
     link3: "././img/3.jpg",
     video: "",
     price: 6500,
+    status: "Под заказ",
     id: "wdqw3322sd32eewf233e2"
   },
   {
@@ -30,6 +32,7 @@ export const initialCards = [
     link3: "././img/6.jpg",
     video: "",
     price: 6300,
+    status: "Под заказ",
     id: "wdqw3322sqwqed32ef23223e2"
   },
   {
@@ -41,6 +44,7 @@ export const initialCards = [
     link3: "././img/3.jpg",
     video: "",
     price: 6500,
+    status: "Под заказ",
     id: "wdqw333322sdwqq32ef233e2"
   },
   {
@@ -52,6 +56,7 @@ export const initialCards = [
     link3: "././img/9.jpg",
     video: "",
     price: 4900,
+    status: "Под заказ",
     id: "wdqw3322sd32ef23dw3e2"
   },
   {
@@ -63,6 +68,7 @@ export const initialCards = [
     link3: "././img/14.jpg",
     video: "",
     price: 6300,
+    status: "Под заказ",
     id: "wdqw33wqw2442sd32ef233e2"
   }
 ];

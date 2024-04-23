@@ -3,6 +3,7 @@ import { initialCards } from '../init/cards.js';
 const inputSearch = document.querySelector(".input-search")
 const buttonSearch = document.querySelector("#button-search")
 const buttonRemoveSearch = document.querySelector(".button-remove-search")
+const zoomImg = document.querySelector(".zoomImg")
 let searchCard = []
 
 function search(items, search) {
@@ -62,7 +63,15 @@ function createCards(item) {
   const carouselItem3 = cardTemplate.querySelector(".carousel-item3")
   const carouselItem4 = cardTemplate.querySelector(".carousel-item4")
   const carouselItem5 = cardTemplate.querySelector(".carousel-item5")
-  const zoomImg = document.querySelector(".zoomImg")
+  const status = cardTemplate.querySelector(".btn-availability")
+
+  if (item.status === "Под заказ") {
+    status.classList.add("btn-order")
+    status.textContent = item.status
+  } else {
+    status.textContent = item.status
+
+  }
 
   if (item.link1) {
     link1.src = item.link1;
