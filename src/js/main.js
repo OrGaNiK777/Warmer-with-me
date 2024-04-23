@@ -8,7 +8,7 @@ let searchCard = []
 
 function search(items, search) {
   const filt = items.filter(el => {
-    return (el.name + " " + el.about).toLowerCase().trim().
+    return (el.name + " " + el.about + " " + el.description).toLowerCase().trim().
       includes(search.value.toLowerCase().trim());
   })
   searchCard = filt
@@ -49,9 +49,6 @@ function createCards(item) {
   cardTemplate.querySelector('.slide').id = item.id
   cardTemplate.querySelector('.carousel-control-prev').href = "#" + item.id
   cardTemplate.querySelector('.carousel-control-next').href = "#" + item.id
-  cardTemplate.querySelectorAll('#buttonSlide').forEach((el) => {
-    el.href = "#" + item.id;
-  })
 
   const link1 = cardTemplate.querySelector(".link1")
   const link2 = cardTemplate.querySelector(".link2")
@@ -63,14 +60,14 @@ function createCards(item) {
   const carouselItem3 = cardTemplate.querySelector(".carousel-item3")
   const carouselItem4 = cardTemplate.querySelector(".carousel-item4")
   const carouselItem5 = cardTemplate.querySelector(".carousel-item5")
-  const status = cardTemplate.querySelector(".btn-availability")
+  const status = cardTemplate.querySelector(".availability")
 
   if (item.status === "Под заказ") {
     status.classList.add("btn-order")
     status.textContent = item.status
+    if (item.status.le) { }
   } else {
     status.textContent = item.status
-
   }
 
   if (item.link1) {

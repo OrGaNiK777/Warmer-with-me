@@ -78,7 +78,7 @@ a:hover {
 	}
 
 	.carousel-item div {
-		height: 350px;
+		height: 400px;
 		width: 300px;
 	}
 
@@ -89,7 +89,7 @@ a:hover {
 
 	.video-slide {
 		width: 300px;
-		height: 350px;
+		height: 400px;
 	}
 }
 
@@ -167,18 +167,26 @@ ul.contact_icons {
 	}
 }
 
-.btn-availability {
+.availability {
+	font-family: 'Poiret One', sans-serif;
 	z-index: 1;
 	position: absolute;
 	right: 20px;
 	top: 20px;
-	background-color: green;
-	font-size: 10px;
-	color: white;
+	background-color: rgba(0, 255, 13, 0.5);
+	border-radius: 4px;
+	font-weight: 400;
+	font-size: 12px;
+	border: solid var(--bs-purple) 1px;
+	margin: 0;
+	color: var(--bs-purple);
+	padding-right: 2px;
+	padding-left: 2px;
 }
 
 .btn-order {
-	background-color: gray;
+	background-color: rgb(204, 204, 204);
+	opacity: 1;
 }
 
 .carousel-item img {
