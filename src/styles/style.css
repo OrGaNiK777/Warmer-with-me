@@ -76,12 +76,16 @@ a:hover {
 		font-size: 10px;
 	}
 	.carousel-item div {
-		height: 350px;
-		width: 300px;
+		height: 300px;
+		width: 240px;
 	}
 	.carousel-control-next,
 	.carousel-control-prev {
-		max-height: 350px;
+		max-height: 300px;
+	}
+	.video-slide {
+		width: 240px;
+		height: 300px;
 	}
 }
 
@@ -144,6 +148,10 @@ ul.contact_icons {
 	.carousel-control-next,
 	.carousel-control-prev {
 		max-height: 550px;
+	}
+	.video-slide {
+		width: 430px;
+		height: 543px;
 	}
 }
 
