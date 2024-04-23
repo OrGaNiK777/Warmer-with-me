@@ -2,11 +2,11 @@ export const initialCards = [
   {
     name: "Комплект",
     about: "Шикарный комплект🌷 из пушистой пряжи пух норки 🌷в фиалковом оттенке (розово-фиолетовый) в палитре 058🌷",
-    // description: "",
+    description: "",
     link1: "././img/11.jpg",
     link2: "././img/12.jpg",
     link3: "././img/13.jpg",
-    // video: "https://vk.com/video_ext.php?oid=-211385859&id=456239053&hash=46deefcffad19ac2",
+    video: "https://vk.com/video_ext.php?oid=-211385859&id=456239053&hash=46deefcffad19ac2",
     price: 7100,
     id: "wdqw332232e23qwe3e2"
   },
