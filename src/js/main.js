@@ -45,7 +45,7 @@ function createCards(item) {
   const cardTemplate = document.getElementById("card-template").content.querySelector(".col").cloneNode(true);
   cardTemplate.querySelector(".name").textContent = item.name;
   cardTemplate.querySelector(".about").textContent = item.about;
-  cardTemplate.querySelector(".description").textContent = item.description;
+  cardTemplate.querySelector(".description").innerText = `${item.description}`;
   cardTemplate.querySelector('.slide').id = item.id
   cardTemplate.querySelector('.carousel-control-prev').href = "#" + item.id
   cardTemplate.querySelector('.carousel-control-next').href = "#" + item.id
