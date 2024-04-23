@@ -1,5 +1,4 @@
 import { initialCards } from '../init/cards.js';
-import { slides } from '../init/slides.js';
 
 const inputSearch = document.querySelector(".input-search")
 const buttonSearch = document.querySelector("#button-search")
@@ -55,54 +54,20 @@ function createCards(item) {
   const link1 = cardTemplate.querySelector(".link1")
   const link2 = cardTemplate.querySelector(".link2")
   const link3 = cardTemplate.querySelector(".link3")
-  const link4 = cardTemplate.querySelector(".link2")
-  const link5 = cardTemplate.querySelector(".link3")
-  const videoSlide = cardTemplate.querySelector(".video-slide")
   const zoomImg = document.querySelector(".zoomImg")
-
-  // const carousel = cardTemplate.querySelector(".carousel-inner")
-
-  // function checkLink(link, html) {
-
-  //   console.log(link)
-  //   console.log(html)
-  //   console.log(carousel)
-  //   if (link.length > 1) { carousel.innerHTML = html }
-  //   console.log(cardTemplate.querySelector(".carousel-inner"))
-  // }
-
-
-  // slides.forEach(el => {
-  //   initialCards.forEach(el1 => { checkLink(el1.link2, el.img2) })
-  // })
-
-
-
 
   if (item.link1) {
     link1.src = item.link1;
     link1.alt = item.name;
-  } else { }
+  }
   if (item.link2) {
     link2.src = item.link2;
     link2.alt = item.name;
-  } else { }
+  }
   if (item.link3) {
     link3.src = item.link3;
     link3.alt = item.name;
-  } else { }
-  if (item.link4) {
-    link4.src = item.link4;
-    link4.alt = item.name;
-  } else { }
-  if (item.link5) {
-    link5.src = item.link5;
-    link5.alt = item.name;
-  } else { }
-  if (item.video) {
-    link5.src = item.link5;
-    link5.alt = item.name;
-  } else { }
+  }
 
   link1.addEventListener("mousedown", () => {
     zoomImg.src = item.link1

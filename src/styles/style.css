@@ -126,18 +126,17 @@ ul.contact_icons {
 	border: none;
 	border-radius: 0;
 	background-color: #f3f1f6;
-	max-width: 430px;
+	max-width: 450px;
 }
 
 .carousel-item img {
 	border-radius: 0;
 	object-fit: contain;
-	max-height: 500px;
-	max-width: 430px;
+	max-height: 600px;
+	max-width: 450px;
 }
 
-.video-slide{
-
+.video-slide {
 }
 
 .name,
