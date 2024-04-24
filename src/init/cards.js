@@ -50,7 +50,7 @@ export const initialCards = [
     link3: "././img/9.jpg",
     video: "",
     price: 4900,
-    status: "В наличии", //"Под заказ",
+    status: "Под заказ", //"Под заказ",
     id: "4"
   },
   {
@@ -80,8 +80,8 @@ export const initialCards = [
     link5: "",
     video: "https://vk.com/video_ext.php?oid=-211385859&id=456239053&hash=46deefcffad19ac2",
     price: "4000",
-    discount: "20",
-    status: "В наличии", //"Под заказ",
+    discount: "",
+    status: "Под заказ", //"Под заказ",
     id: "6"
   }
 ];

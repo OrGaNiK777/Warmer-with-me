@@ -45,11 +45,12 @@ function createCards(item) {
   const cardTemplate = document.getElementById("card-template").content.querySelector(".col").cloneNode(true);
   cardTemplate.querySelector(".name").textContent = item.name;
   cardTemplate.querySelector(".about").textContent = item.about;
-  cardTemplate.querySelector(".description").innerText = `${item.description}`;
-  cardTemplate.querySelector('.slide').id = item.id
-  cardTemplate.querySelector('.carousel-control-prev').href = "#" + item.id
-  cardTemplate.querySelector('.carousel-control-next').href = "#" + item.id
+  cardTemplate.querySelector(".description").innerText = item.description;
+  cardTemplate.querySelector('.slide').id = item.id;
+  cardTemplate.querySelector('.carousel-control-prev').href = "#" + item.id;
+  cardTemplate.querySelector('.carousel-control-next').href = "#" + item.id;
 
+  const description = cardTemplate.querySelector(".description")
   const price = cardTemplate.querySelectorAll(".price")
   const discount = cardTemplate.querySelectorAll(".discount")
   const discountProc = cardTemplate.querySelectorAll(".discount-proc")
@@ -66,10 +67,13 @@ function createCards(item) {
   const status = cardTemplate.querySelector(".availability")
 
   if (item.status === "Под заказ") {
+    description.innerText = "Заказ по индивидуальным размерам"
+
     status.classList.add("btn-order")
     status.textContent = item.status
     if (item.status.le) { }
   } else {
+    description.innerText = item.description;
     status.textContent = item.status
   }
 
