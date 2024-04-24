@@ -122,7 +122,7 @@ function createCards(item) {
     carouselItem5.remove("carousel-item5")
   }
 
-  link1.addEventListener("mousedown", () => {
+  link1.addEventListener("click", () => {
     zoomImg.src = item.link1
   })
   link2.addEventListener("mousedown", () => {
