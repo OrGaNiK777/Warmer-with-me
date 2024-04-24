@@ -5,9 +5,23 @@ const buttonSearch = document.querySelector("#button-search")
 const buttonRemoveSearch = document.querySelector(".button-remove-search")
 const zoomImg = document.querySelector(".zoomImg")
 const mainSmart = document.querySelector(".main-smart")
-const mainSmartButton1 = document.querySelector(".main-smart-button1")
-const mainSmartButton2 = document.querySelector(".main-smart-button2")
+const buttonMainSmart1 = document.querySelector(".main-smart-button1")
+const buttonMainSmart2 = document.querySelector(".main-smart-button2")
 let searchCard = []
+
+
+
+buttonMainSmart1.addEventListener("click", () => {
+  const filt = initialCards.filter((item) => { if (item.status === "В наличии") { return true } })
+  searchCard = filt
+  rendererCard(searchCard)
+})
+
+buttonMainSmart2.addEventListener("click", () => {
+  const filt = initialCards.filter(item => { if (item.status === "Под заказ") { return true } })
+  searchCard = filt
+  rendererCard(searchCard)
+})
 
 function search(items, search) {
   const filt = items.filter(el => {
@@ -20,8 +34,6 @@ function search(items, search) {
 buttonRemoveSearch.addEventListener("click", () => {
   inputSearch.value = ""
   buttonRemoveSearch.classList.add("btn-close-hidden")
-  removeAllCards()
-  rendererCard(initialCards)
 })
 
 inputSearch.addEventListener("keydown", (e) => {
