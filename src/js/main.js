@@ -152,7 +152,7 @@ function createCards(item) {
 }
 
 function rendererCard(items) {
-  mainSmart.classList.add("main-smart-none")
+  mainSmart.classList.remove("main-smart-visib")
   items.forEach((item) => {
     document.querySelector(".cards-list").append(createCards(item)
     );
@@ -160,3 +160,4 @@ function rendererCard(items) {
 }
 
 if (document.documentElement.clientWidth > 500) { rendererCard(initialCards) }
+if (document.documentElement.clientWidth < 500) { mainSmart.classList.add("main-smart-visib") }

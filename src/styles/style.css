@@ -308,8 +308,8 @@ ul.contact_icons {
 }
 
 .main-smart {
-	opacity: 1;
-	transition: all 0.5s linear;
+	opacity: 0;
+	visibility: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -321,11 +321,12 @@ ul.contact_icons {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
+	transition: all 0.5s linear;
 }
 
-.main-smart-none {
-	opacity: 0;
-	height: 0%;
+.main-smart-visib {
+	visibility: visible;
+	opacity: 1;
 }
 
 .main-smart-button1,
