@@ -66,7 +66,8 @@
 						<div id="carouselExampleIndicators" class="carousel slide">
 							<a id="buttonModal" href="#staticBackdrop" type="button" data-bs-toggle="modal">
 								<div class="carousel-inner">
-									<div class="availability"></div>
+									<div class="tabl availability"></div>
+									<div class="tabl discount-proc"></div>
 									<div class="carousel-item carousel-item1 active">
 										<div>
 											<img type="button" src="..." class="link1 d-block" alt="..." />
@@ -95,15 +96,21 @@
 							<span class="carousel-control-next-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">Next</span>
 						</a>
-						<div class="card-body container">
+						<div class="card-body container" style="padding-top: 5px">
 							<div class="row">
-								<div class="col-4">
-									<h5 class="name card-title"></h5>
-									<p class="price card-text">...</p>
+								<div class="col-4" style="padding: 0">
+									<h5 class="name card-title" style="margin-bottom: 2px"></h5>
+									<div style="display: flex">
+										<h5 class="price-text">Цена:</h5>
+										<div class="">
+											<h5 class="discount">...</h5>
+											<h5 class="price card-text">...</h5>
+										</div>
+									</div>
 								</div>
-								<h5 class="description col-8" style="vertical-align: middle"></h5>
+								<h5 class="col-8 description"></h5>
 							</div>
-							<h5 class="about"></h5>
+							<h5 class="about" style="padding-top: 10px"></h5>
 						</div>
 					</div>
 				</div>
@@ -111,8 +118,8 @@
 			<div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<div style="background-color: rgba(0, 0, 0, 0); border: none" class="modal-content">
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						<div class="cardModal">
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 							<img style="max-width: 450px" src="..." class="zoomImg card-img-top" alt="..." />
 						</div>
 					</div>

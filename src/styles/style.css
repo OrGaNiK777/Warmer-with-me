@@ -84,7 +84,7 @@ a:hover {
 
 	.carousel-control-next,
 	.carousel-control-prev {
-		max-height: 300px;
+		max-height: 400px;
 	}
 
 	.video-slide {
@@ -148,6 +148,7 @@ ul.contact_icons {
 	border-radius: 0;
 	background-color: #f3f1f6;
 	max-width: 430px;
+	width: 430px;
 }
 
 @media screen and (width > 500px) {
@@ -167,13 +168,10 @@ ul.contact_icons {
 	}
 }
 
-.availability {
+.tabl {
 	font-family: 'Poiret One', sans-serif;
 	z-index: 1;
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	background-color: rgba(0, 255, 13, 0.5);
+	background-color: rgba(0, 255, 13, 0.7);
 	border-radius: 4px;
 	font-weight: 400;
 	font-size: 12px;
@@ -182,6 +180,19 @@ ul.contact_icons {
 	color: var(--bs-purple);
 	padding-right: 2px;
 	padding-left: 2px;
+}
+
+.availability {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+.discount-proc {
+	display: none;
+	position: absolute;
+	left: 20px;
+	top: 20px;
 }
 
 .btn-order {
@@ -198,7 +209,8 @@ ul.contact_icons {
 
 .name,
 .about,
-.description {
+.description,
+.discount {
 	margin: 0;
 	padding: 0;
 	font-family: 'Poiret One', sans-serif;
@@ -206,9 +218,29 @@ ul.contact_icons {
 }
 
 .price {
+	margin: 0;
+	margin-left: 5px;
 	font-family: 'Poiret One', sans-serif;
 	font-size: 12px;
+	color: rgb(0, 0, 0);
+}
+
+.price-text {
+	margin: 0;
+	font-family: 'Poiret One', sans-serif;
+	font-size: 12px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.price-discount {
+	text-decoration: line-through;
 	color: rgb(136, 136, 136);
+}
+
+.discount {
+	display: none;
+	margin-left: 5px;
 }
 
 .carousel {
@@ -250,8 +282,8 @@ ul.contact_icons {
 	margin-right: auto;
 }
 
-.cardModal button {
+.modal-content button {
 	position: absolute;
-	right: 20px;
-	top: 20px;
+	margin-left: 85%;
+	margin-top: 5%;
 }

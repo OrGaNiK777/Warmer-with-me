@@ -50,6 +50,9 @@ function createCards(item) {
   cardTemplate.querySelector('.carousel-control-prev').href = "#" + item.id
   cardTemplate.querySelector('.carousel-control-next').href = "#" + item.id
 
+  const price = cardTemplate.querySelectorAll(".price")
+  const discount = cardTemplate.querySelectorAll(".discount")
+  const discountProc = cardTemplate.querySelectorAll(".discount-proc")
   const link1 = cardTemplate.querySelector(".link1")
   const link2 = cardTemplate.querySelector(".link2")
   const link3 = cardTemplate.querySelector(".link3")
@@ -113,8 +116,19 @@ function createCards(item) {
     zoomImg.src = item.link4
   })
 
-  if (item.price) { cardTemplate.querySelectorAll(".price").forEach((el) => { el.textContent = "Цена: " + item.price + " руб."; }) }
-  else { cardTemplate.querySelectorAll(".price").forEach((el) => { el.textContent = "Цена: Узнать лично" }) }
+  if (item.price) {
+    price.forEach((el) => { el.textContent = item.price + " ₽"; })
+
+  } else { price.forEach((el) => { el.textContent = "Уточнить лично" }) }
+
+  if (item.discount) {
+    discountProc.forEach(el => { el.textContent = "-" + item.discount + "%"; el.classList.add("d-block") })
+    price.forEach((el) => {
+      el.classList.add("price-discount");
+      discount.forEach(el => { el.textContent = item.price - (item.price * item.discount / 100) + " ₽"; el.classList.add("d-block") })
+    })
+  }
+
   return cardTemplate;
 }
 
