@@ -4,6 +4,9 @@ const inputSearch = document.querySelector(".input-search")
 const buttonSearch = document.querySelector("#button-search")
 const buttonRemoveSearch = document.querySelector(".button-remove-search")
 const zoomImg = document.querySelector(".zoomImg")
+const mainSmart = document.querySelector(".main-smart")
+const mainSmartButton1 = document.querySelector(".main-smart-button1")
+const mainSmartButton2 = document.querySelector(".main-smart-button2")
 let searchCard = []
 
 function search(items, search) {
@@ -137,9 +140,11 @@ function createCards(item) {
 }
 
 function rendererCard(items) {
+  mainSmart.classList.add("d-none")
   items.forEach((item) => {
-    document.querySelector(".cards-list").append(createCards(item));
+    document.querySelector(".cards-list").append(createCards(item)
+    );
   });
 }
 
-rendererCard(initialCards)
+if (document.documentElement.clientWidth > 500) { rendererCard(initialCards) }

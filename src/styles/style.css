@@ -143,29 +143,17 @@ ul.contact_icons {
 	font-size: 0.4rem;
 }
 
+.main {
+	margin-top: 10px;
+	padding-bottom: 15px;
+}
+
 .card {
 	border: none;
 	border-radius: 0;
 	background-color: #f3f1f6;
 	max-width: 430px;
 	width: 430px;
-}
-
-@media screen and (width > 500px) {
-	.carousel-item div {
-		height: 550px;
-		width: 430px;
-	}
-
-	.carousel-control-next,
-	.carousel-control-prev {
-		max-height: 550px;
-	}
-
-	.video-slide {
-		width: 430px;
-		height: 543px;
-	}
 }
 
 .tabl {
@@ -272,11 +260,6 @@ ul.contact_icons {
 	transition: opacity 0.6s ease;
 }
 
-.main {
-	margin-top: 10px;
-	padding-bottom: 15px;
-}
-
 .cardModal {
 	margin-left: auto;
 	margin-right: auto;
@@ -286,4 +269,37 @@ ul.contact_icons {
 	position: absolute;
 	margin-left: 85%;
 	margin-top: 5%;
+}
+
+@media screen and (width > 500px) {
+	.carousel-item div {
+		height: 550px;
+		width: 430px;
+	}
+
+	.carousel-control-next,
+	.carousel-control-prev {
+		max-height: 550px;
+	}
+
+	.video-slide {
+		width: 430px;
+		height: 543px;
+	}
+}
+
+.main-smart {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../../img/backgr.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.main-smart-buttons {
+	position: fixed;
+	top: 50%;
+	left: 50%;
 }
