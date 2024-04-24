@@ -80,7 +80,7 @@ a:hover {
 
 	.carousel-item div {
 		height: 400px;
-		width: 300px;
+		width: 400px;
 	}
 
 	.carousel-control-next,
@@ -97,6 +97,21 @@ a:hover {
 		position: absolute;
 		margin-left: 90%;
 		margin-top: 5%;
+	}
+
+	.card {
+		border: none;
+		border-radius: 0;
+		background-color: #f3f1f6;
+		max-width: 400px;
+		width: 400px;
+	}
+
+	.carousel-item img {
+		object-fit: contain;
+		border-radius: 0;
+		height: 400px;
+		width: 400px;
 	}
 }
 
@@ -155,14 +170,6 @@ ul.contact_icons {
 	padding-bottom: 15px;
 }
 
-.card {
-	border: none;
-	border-radius: 0;
-	background-color: #f3f1f6;
-	max-width: 430px;
-	width: 430px;
-}
-
 .tabl {
 	font-family: 'Poiret One', sans-serif;
 	z-index: 1;
@@ -191,13 +198,6 @@ ul.contact_icons {
 
 .btn-order {
 	background-color: rgb(204, 204, 204);
-}
-
-.carousel-item img {
-	object-fit: contain;
-	border-radius: 0;
-	width: 100%;
-	height: 100%;
 }
 
 .name,
@@ -291,11 +291,25 @@ ul.contact_icons {
 		margin-left: 85%;
 		margin-top: 5%;
 	}
+	.card {
+		border: none;
+		border-radius: 0;
+		background-color: #f3f1f6;
+		max-width: 430px;
+		width: 430px;
+	}
+
+	.carousel-item img {
+		object-fit: contain;
+		border-radius: 0;
+		height: 550px;
+		width: 430px;
+	}
 }
 
 .main-smart {
 	opacity: 1;
-	transition: all .5s linear;
+	transition: all 0.5s linear;
 	display: flex;
 	justify-content: center;
 	align-items: center;
