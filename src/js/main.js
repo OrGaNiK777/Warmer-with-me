@@ -25,7 +25,7 @@ buttonMainSmart2.addEventListener("click", () => {
 
 function search(items, search) {
   const filt = items.filter(el => {
-    return (el.name + " " + el.about + " " + el.description).toLowerCase().trim().
+    return (el.name + " " + el.about + " " + el.description + " " + el.status).toLowerCase().trim().
       includes(search.value.toLowerCase().trim());
   })
   searchCard = filt
