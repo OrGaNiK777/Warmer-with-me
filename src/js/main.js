@@ -152,7 +152,7 @@ function createCards(item) {
 }
 
 function rendererCard(items) {
-  mainSmart.classList.add("d-none")
+  mainSmart.classList.add("main-smart-none")
   items.forEach((item) => {
     document.querySelector(".cards-list").append(createCards(item)
     );

@@ -294,7 +294,8 @@ ul.contact_icons {
 }
 
 .main-smart {
-	transition: all 0.5s;
+	opacity: 1;
+	transition: all .5s linear;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -306,6 +307,11 @@ ul.contact_icons {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
+}
+
+.main-smart-none {
+	opacity: 0;
+	height: 0%;
 }
 
 .main-smart-button1,
