@@ -62,9 +62,10 @@ function createCards(item) {
   cardTemplate.querySelector(".about").textContent = item.about;
   cardTemplate.querySelector(".description").innerText = item.description;
   cardTemplate.querySelector('.slide').id = item.id;
-  cardTemplate.querySelector('.carousel-control-prev').href = "#" + item.id;
-  cardTemplate.querySelector('.carousel-control-next').href = "#" + item.id;
 
+
+  const carouselControlPrev = cardTemplate.querySelector('.carousel-control-prev')
+  const carouselControlNext = cardTemplate.querySelector('.carousel-control-next')
   const description = cardTemplate.querySelector(".description")
   const price = cardTemplate.querySelectorAll(".price")
   const discount = cardTemplate.querySelectorAll(".discount")
@@ -81,9 +82,11 @@ function createCards(item) {
   const carouselItem5 = cardTemplate.querySelector(".carousel-item5")
   const status = cardTemplate.querySelector(".availability")
 
+  carouselControlPrev.href = "#" + item.id;
+  carouselControlNext.href = "#" + item.id;
+
   if (item.status === "Под заказ") {
     description.innerText = `Заказ по индивидуальным размерам, возможен повтор в любом оттенке`
-
     status.classList.add("btn-order")
     status.textContent = item.status
     if (item.status.le) { }
@@ -124,6 +127,11 @@ function createCards(item) {
     carouselItem5.remove("carousel-item5")
   } else {
     videoSlide.innerHTML = `<iframe class="video" src=${item.video} frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`
+  }
+
+  if (!item.video & !item.link2) {
+    carouselControlPrev.remove('carousel-control-prev')
+    carouselControlNext.remove('carousel-control-next')
   }
 
   link1.addEventListener("click", () => {
