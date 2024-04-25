@@ -4,7 +4,6 @@ function increment() {
   n++;
   return n;
 }
-console.log(increment())
 
 export const initialCards = [
   {
