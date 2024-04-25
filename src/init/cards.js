@@ -214,7 +214,7 @@ export const initialCards = [
     link3: ``,
     link4: ``,
     link5: ``,
-    video: "https://vk.com/video_ext.php?oid=-211385859&id=456239027&hash=a6c4fdefa3e4a885",
+    video: "",
     price: "4000",
     discount: "",
     status: "Под заказ", //"Под заказ",

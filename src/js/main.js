@@ -86,7 +86,8 @@ function createCards(item) {
   carouselControlNext.href = "#" + item.id;
 
   if (item.status === "Под заказ") {
-    description.innerText = `Заказ по индивидуальным размерам, возможен повтор в любом оттенке`
+    description.innerText = `Заказ по индивидуальным размерам, 
+    Возможен повтор в любом цвете`
     status.classList.add("btn-order")
     status.textContent = item.status
     if (item.status.le) { }
