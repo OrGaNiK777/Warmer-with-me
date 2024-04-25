@@ -15,7 +15,7 @@ export const initialCards = [
     link1: "././img/11.jpg",
     link2: "././img/12.jpg",
     link3: "././img/13.jpg",
-    video: "https://www.youtube.com/embed/mMtqVEAz0tM",
+    video: "",
     price: "7300",
     status: "В наличии",
     id: `${increment()}`
@@ -195,7 +195,7 @@ export const initialCards = [
     about: `Пух норки`,
     description: ``,
     link1: `https://sun9-78.userapi.com/impg/p2fUn9PWr_BTfzQe98Nr0NAz7oS6QW0nTYm6wA/zdat2xj4rpY.jpg?size=1200x1600&quality=95&sign=d371971db9464e7ae5ae078d76e47852&type=album`,
-    link2: `https://sun9-49.userapi.com/impg/FEf9KPScOLnUF3sC9BAbx0bnHs-nnFuiGNHnLQ/j-iaGLjK-qs.jpg?size=712x960&quality=95&sign=4c6fead87f54de796f9b99c0ed5a8ff7&type=album`,
+    link2: ``,
     link3: ``,
     link4: ``,
     link5: ``,
