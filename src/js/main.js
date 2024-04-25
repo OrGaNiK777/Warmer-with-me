@@ -92,35 +92,38 @@ function createCards(item) {
     status.textContent = item.status
   }
 
-  if (item.link1) {
+  if (!item.link1) {
+    carouselItem1.remove("carousel-item1")
+  } else {
     link1.src = item.link1;
     link1.alt = item.name;
-  } else {
-    carouselItem1.remove("carousel-item1")
   }
-  if (item.link2) {
+
+  if (!item.link2) {
+    carouselItem2.remove("carousel-item2")
+  } else {
     link2.src = item.link2;
     link2.alt = item.name;
-  } else {
-    carouselItem2.remove("carousel-item2")
   }
-  if (item.link3) {
+
+  if (!item.link3) {
+    carouselItem3.remove("carousel-item3")
+  } else {
     link3.src = item.link3;
     link3.alt = item.name;
-  } else {
-    carouselItem3.remove("carousel-item3")
   }
-  if (item.link4) {
+
+  if (!item.link4) {
+    carouselItem4.remove("carousel-item4")
+  } else {
     link4.src = item.link4;
     link4.alt = item.name;
-  } else {
-    carouselItem4.remove("carousel-item4")
   }
-  if (item.video) {
-    console.log(videoSlide)
-    videoSlide.innerHTML = `<iframe src=${item.video} frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`
-  } else {
+
+  if (!item.video) {
     carouselItem5.remove("carousel-item5")
+  } else {
+    videoSlide.innerHTML = `<iframe style="width: 430px;	height: 543px;" src=${item.video} frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`
   }
 
   link1.addEventListener("click", () => {
@@ -138,7 +141,6 @@ function createCards(item) {
 
   if (item.price) {
     price.forEach((el) => { el.textContent = item.price + " ₽"; })
-
   } else { price.forEach((el) => { el.textContent = "Уточнить лично" }) }
 
   if (item.discount) {

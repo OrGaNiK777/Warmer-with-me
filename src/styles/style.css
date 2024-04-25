@@ -270,6 +270,10 @@ ul.contact_icons {
 	margin-right: auto;
 }
 
+.zoomImg{
+	max-width: 450px
+}
+
 @media screen and (width > 500px) {
 	.carousel-item div {
 		height: 550px;
@@ -279,11 +283,6 @@ ul.contact_icons {
 	.carousel-control-next,
 	.carousel-control-prev {
 		max-height: 550px;
-	}
-
-	.video-slide {
-		width: 430px;
-		height: 543px;
 	}
 
 	.modal-content button {
