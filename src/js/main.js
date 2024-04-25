@@ -123,7 +123,7 @@ function createCards(item) {
   if (!item.video) {
     carouselItem5.remove("carousel-item5")
   } else {
-    videoSlide.innerHTML = `<iframe style="width: 430px;	height: 543px;" src=${item.video} frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`
+    videoSlide.innerHTML = `<iframe class="video" src=${item.video} frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`
   }
 
   link1.addEventListener("click", () => {

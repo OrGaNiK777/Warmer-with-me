@@ -15,7 +15,7 @@ export const initialCards = [
     link1: "././img/11.jpg",
     link2: "././img/12.jpg",
     link3: "././img/13.jpg",
-    video: "",
+    video: "https://www.youtube.com/embed/mMtqVEAz0tM",
     price: "7300",
     status: "В наличии",
     id: `${increment()}`

@@ -88,8 +88,8 @@ a:hover {
 		max-height: 400px;
 	}
 
-	.video-slide {
-		width: 300px;
+	.video {
+		width: 400px;
 		height: 400px;
 	}
 
@@ -270,8 +270,8 @@ ul.contact_icons {
 	margin-right: auto;
 }
 
-.zoomImg{
-	max-width: 450px
+.zoomImg {
+	max-width: 450px;
 }
 
 @media screen and (width > 500px) {
@@ -295,6 +295,11 @@ ul.contact_icons {
 		border-radius: 0;
 		background-color: #f3f1f6;
 		max-width: 430px;
+		width: 430px;
+	}
+
+	.video {
+		height: 550px;
 		width: 430px;
 	}
 
