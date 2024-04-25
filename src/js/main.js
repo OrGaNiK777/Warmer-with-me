@@ -82,7 +82,7 @@ function createCards(item) {
   const status = cardTemplate.querySelector(".availability")
 
   if (item.status === "Под заказ") {
-    description.innerText = "Заказ по индивидуальным размерам"
+    description.innerText = `Заказ по индивидуальным размерам, возможен повтор в любом оттенке`
 
     status.classList.add("btn-order")
     status.textContent = item.status
@@ -154,8 +154,9 @@ function createCards(item) {
 function rendererCard(items) {
   mainSmart.classList.remove("main-smart-visib")
   items.forEach((item) => {
-    document.querySelector(".cards-list").append(createCards(item)
-    );
+    if (item.name) {
+      document.querySelector(".cards-list").append(createCards(item))
+    };
   });
 }
 

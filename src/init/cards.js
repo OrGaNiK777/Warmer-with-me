@@ -1,3 +1,11 @@
+let n = 0;
+
+function increment() {
+  n++;
+  return n;
+}
+console.log(increment())
+
 export const initialCards = [
   {
     name: "Комплект",
@@ -9,49 +17,45 @@ export const initialCards = [
     link2: "././img/12.jpg",
     link3: "././img/13.jpg",
     video: "",
-    price: 7300,
+    price: "7300",
     status: "В наличии",
-    id: "1"
+    id: `${increment()}`
   },
   {
     name: "Комплект",
-    about: "Восхитительный комплект🌷 из пушистой пряжи пух норки 🌷в терракотовом оттенке 🌷",
-    description: `Шапочка и снуд уголок на обхват головы 56-58см 
-    Варежки на длину ладони 18-19см`,
+    about: `Пух норки`,
+    description: `Заказ по вашим индивидуальным размерам, возможен повтор в любом оттенке`,
     link1: "././img/1.jpg",
     link2: "././img/2.jpg",
     link3: "././img/3.jpg",
     video: "",
-    price: 6500,
+    price: "",
     status: "Под заказ",
-    id: "2"
+    id: `${increment()}`
   },
   {
     name: "Комплект1",
-    about: "Потрясающий комплект🌷 из пушистой пряжи пух норки 🌷в оттенке тауп 🌷",
-    description: `Зимний капор с манишкой на обхват головы 55-60см.
-    Варежки на длину ладони 18-19см.`,
+    about: "Пух норки",
+    description: `Заказ по вашим индивидуальным размерам , возможен повтор в любом оттенке`,
     link1: "././img/4.jpg",
     link2: "././img/5.jpg",
     link3: "././img/6.jpg",
     video: "",
-    price: 6300,
-    status: "В наличии",
-    id: "3"
+    price: "",
+    status: "Под заказ",
+    id: `${increment()}`
   },
   {
     name: "Комплект",
-    about: `Прекрасный комплект🌷 из пушистой пряжи пух норки 🌷в базовом оттенке 💎холодный беж🌷
-    ( оттенок капризный , трудно передается, ориентируйтесь пожалуйста на фото на мне и цветовую палитру номер 816)🙏🏼`,
-    description: `Шапочка на обхват головы 56-58см
-    Варежки на длину ладони 18-19см`,
+    about: `Пух норки`,
+    description: `Заказ по вашим индивидуальным размерам , возможен повтор в любом оттенке`,
     link1: "././img/7.jpg",
     link2: "././img/8.jpg",
     link3: "././img/9.jpg",
     video: "",
-    price: 4900,
+    price: "",
     status: "Под заказ", //"Под заказ",
-    id: "4"
+    id: `${increment()}`
   },
   {
     name: "Комплект",
@@ -65,23 +69,171 @@ export const initialCards = [
     price: 6300,
     discount: "",
     status: "В наличии",
-    id: "5"
+    id: `${increment()}`
   },
   {
     name: "Капор",
-    about: `Нежнейший капор в оттенке серый туман✨пух норки ✨`,
-    description: `Размер на ОГ 55-60 см
-    Сезон весна/осень /теплая зима
-    В сезон скидок не будет ❎`,
+    about: `Пух норки`,
+    description: ``,
     link1: "https://sun9-46.userapi.com/impg/RItpnZXmFCrbh5TLB9OdHG7hWttrTLzcVg6Psw/E64yPjnpcI0.jpg?size=453x604&quality=95&sign=990fb173cb8dc009f5b720b336a56079&c_uniq_tag=AKn2nRtYLmKf0UYt1uiHZQBFXPZrQof02OfdOmVthlA&type=album",
     link2: "https://sun9-6.userapi.com/impg/FWIbhmpjrO7ze4g12Qyjf0PPHBYgpbHAd6oGFg/fTwG6u-BR6g.jpg?size=404x604&quality=95&sign=0aad22c2f3e7c99984b299adaa4fde3f&c_uniq_tag=Gb1n9XpMfZKVFpnweZUUK1IHWf-4uTWGohAx57XVzcA&type=album",
     link3: "",
     link4: "",
     link5: "",
     video: "https://vk.com/video_ext.php?oid=-211385859&id=456239053&hash=46deefcffad19ac2",
+    price: "",
+    discount: "",
+    status: "Под заказ", //"Под заказ",
+    id: `${increment()}`
+  },
+  {
+    name: "Комплект",
+    about: `Пух норки`,
+    description: ``,
+    link1: `https://sun9-36.userapi.com/impg/3CuZQAjtRPsYE0H5aae9qPjA8bBPq70JrnO9CQ/tgPpWYQAsiY.jpg?size=1620x2160&quality=95&sign=53b317719a6026ed692497d12e01e6b5&type=album`,
+    link2: ``,
+    link3: ``,
+    link4: ``,
+    link5: ``,
+    video: "https://vk.com/video_ext.php?oid=-211385859&id=456239052&hash=4b9a4a761b6c5c1e",
+    price: "",
+    discount: "",
+    status: "Под заказ", //"Под заказ",
+    id: `${increment()}`
+  },
+  {
+    name: "Комплект",
+    about: `Пух норки`,
+    description: ``,
+    link1: `https://sun9-25.userapi.com/impg/gDUz82HO8qczyTlVOMiJRQn-gMIi-KsVCaEfWg/KguqFnZDs3o.jpg?size=1620x2160&quality=95&sign=3f35e0a8d861de212e54fd0e5cc2d6f0&type=album`,
+    link2: ``,
+    link3: ``,
+    link4: ``,
+    link5: ``,
+    video: "",
+    price: "",
+    discount: "",
+    status: "Под заказ", //"Под заказ",
+    id: `${increment()}`
+  },
+  {
+    name: "Комплект",
+    about: `Пух норки`,
+    description: ``,
+    link1: `https://sun9-80.userapi.com/impg/qjnZSSvp3bQfiSzjoSsFUFjZGzR_A48exU-Xfg/fWnSUKIoDJ0.jpg?size=1620x2160&quality=95&sign=4bbaa5c3c25d58cc383c04d98ca22240&type=album`,
+    link2: `https://sun9-58.userapi.com/impg/xZni93zo55TCQUtvXQ1PrZoYRDXO76ZU5lPQWg/5TpE8ncYQ60.jpg?size=1620x2160&quality=95&sign=6e4a3eda397271600270bf0ff040b619&type=album`,
+    link3: ``,
+    link4: ``,
+    link5: ``,
+    video: "https://vk.com/video_ext.php?oid=-211385859&id=456239045&hash=7b1a7063b58f7a8f",
+    price: "",
+    discount: "",
+    status: "Под заказ", //"Под заказ",
+    id: `${increment()}`
+  },
+  {
+    name: "Комплект",
+    about: `Пух норки`,
+    description: ``,
+    link1: `https://sun9-41.userapi.com/impg/XKy0d28Aweuwq0W1xsPkXETgPNlNt6xeL7Pm3A/QjWEIVip4O4.jpg?size=1620x2160&quality=95&sign=fc1e9dbc889cfcb336fa8c70ece48a84&type=album`,
+    link2: `https://sun9-54.userapi.com/impg/mcO_S6VAGLAKlK0UtXriKtblG0x0f4wZdjjBMg/gE-lZ0ubJRs.jpg?size=1620x2160&quality=95&sign=a1339fa70f0d6ae6a573a58859eb7a7e&type=album`,
+    link3: ``,
+    link4: ``,
+    link5: ``,
+    video: "",
+    price: "",
+    discount: "",
+    status: "Под заказ", //"Под заказ",
+    id: `${increment()}`
+  },
+  {
+    name: "Комплект",
+    about: `Пух норки`,
+    description: ``,
+    link1: `https://sun9-12.userapi.com/impg/wtUIupzVHdebwyBdjQbMvP8OYE1w-jo84AYJjQ/6OX5Wi1wheg.jpg?size=1620x2160&quality=95&sign=81d5a3499a217444e5f0bf95b0263c4a&type=album`,
+    link2: `https://sun9-8.userapi.com/impg/uGYHjKLROtkDojnNdRvo5ZKMZFKL8SYmXiJHgA/4T8vUD77pCk.jpg?size=1620x2160&quality=95&sign=27e4232b5d8231bca56e851bc2f1b1a8&type=album`,
+    link3: ``,
+    link4: ``,
+    link5: ``,
+    video: "",
+    price: "",
+    discount: "",
+    status: "Под заказ", //"Под заказ",
+    id: `${increment()}`
+  },
+  {
+    name: "Комплект",
+    about: `Пух норки`,
+    description: ``,
+    link1: `https://sun9-33.userapi.com/impg/gEw_Zrv6eZiAe5DNaJj6f9NPL6IIIP4199FR4A/jgRMG4iosOA.jpg?size=1614x2113&quality=95&sign=578dd83e82f6907677d1c8b8992155b6&type=album`,
+    link2: ``,
+    link3: ``,
+    link4: ``,
+    link5: ``,
+    video: "",
+    price: "",
+    discount: "",
+    status: "Под заказ", //"Под заказ",
+    id: `${increment()}`
+  },
+  {
+    name: "Комплект",
+    about: `Пух норки`,
+    description: ``,
+    link1: `https://sun9-3.userapi.com/impg/ffRAWEE4yxoE5MqmsUloUIi_5_IdCOL_j32qIw/QWvYatTWJCg.jpg?size=1620x2160&quality=95&sign=1520af0e70abdf8f41fc4dcfe46147c9&type=album`,
+    link2: `https://sun9-77.userapi.com/impg/siKm9jQOiHk9rYLMCub4DIuFvv3m7XMQ3ThRiA/Vcx2gcnKhHU.jpg?size=1620x2160&quality=95&sign=dc918d4d911354272286e784266f7d48&type=album`,
+    link3: `https://sun9-26.userapi.com/impg/a2Sfc4kQ3JAC1gMiVlcuoimRTFjsNKXmCktqVQ/78Q-U7fM5Bk.jpg?size=1709x2160&quality=95&sign=fa82df53e8db52f953f6a2468e154cb9&type=album`,
+    link4: ``,
+    link5: ``,
+    video: "",
+    price: "",
+    discount: "",
+    status: "Под заказ", //"Под заказ",
+    id: `${increment()}`
+  },
+  {
+    name: "Комплект",
+    about: `Пух норки`,
+    description: ``,
+    link1: `https://sun9-78.userapi.com/impg/p2fUn9PWr_BTfzQe98Nr0NAz7oS6QW0nTYm6wA/zdat2xj4rpY.jpg?size=1200x1600&quality=95&sign=d371971db9464e7ae5ae078d76e47852&type=album`,
+    link2: `https://sun9-49.userapi.com/impg/FEf9KPScOLnUF3sC9BAbx0bnHs-nnFuiGNHnLQ/j-iaGLjK-qs.jpg?size=712x960&quality=95&sign=4c6fead87f54de796f9b99c0ed5a8ff7&type=album`,
+    link3: ``,
+    link4: ``,
+    link5: ``,
+    video: "https://vk.com/video_ext.php?oid=-211385859&id=456239027&hash=a6c4fdefa3e4a885",
+    price: "",
+    discount: "",
+    status: "Под заказ", //"Под заказ",
+    id: `${increment()}`
+  },
+  {
+    name: "",
+    about: `Пух норки`,
+    description: ``,
+    link1: ``,
+    link2: ``,
+    link3: ``,
+    link4: ``,
+    link5: ``,
+    video: "",
     price: "4000",
     discount: "",
     status: "Под заказ", //"Под заказ",
-    id: "6"
+    id: `${increment()}`
+  },
+  {
+    name: "",
+    about: `Пух норки`,
+    description: ``,
+    link1: ``,
+    link2: ``,
+    link3: ``,
+    link4: ``,
+    link5: ``,
+    video: "",
+    price: "4000",
+    discount: "",
+    status: "Под заказ", //"Под заказ",
+    id: `${increment()}`
   }
 ];
