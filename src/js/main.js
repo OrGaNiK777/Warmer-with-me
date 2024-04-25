@@ -118,7 +118,7 @@ function createCards(item) {
   }
   if (item.video) {
     console.log(videoSlide)
-    videoSlide. `<iframe src=${item.video} frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`
+    videoSlide.innerHTML = `<iframe src=${item.video} frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`
   } else {
     carouselItem5.remove("carousel-item5")
   }
