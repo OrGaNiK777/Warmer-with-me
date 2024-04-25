@@ -80,7 +80,6 @@ a:hover {
 
 	.carousel-item div {
 		height: 400px;
-		width: 400px;
 	}
 
 	.carousel-control-next,
@@ -88,9 +87,13 @@ a:hover {
 		max-height: 400px;
 	}
 
+	.video-slide {
+		width: 320px;
+	}
+
 	.video {
-		width: 400px;
 		height: 400px;
+		width: 100%;
 	}
 
 	.modal-content button {
@@ -104,14 +107,13 @@ a:hover {
 		border-radius: 0;
 		background-color: #f3f1f6;
 		max-width: 400px;
-		width: 400px;
 	}
 
 	.carousel-item img {
 		object-fit: contain;
 		border-radius: 0;
 		height: 400px;
-		width: 400px;
+		width: 100%;
 	}
 }
 
