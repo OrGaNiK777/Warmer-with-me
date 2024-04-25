@@ -88,12 +88,13 @@ a:hover {
 	}
 
 	.video-slide {
-		width: 320px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
 	}
 
 	.video {
 		height: 400px;
-		width: 100%;
 	}
 
 	.modal-content button {
