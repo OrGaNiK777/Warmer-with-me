@@ -9,7 +9,7 @@ const buttonMainSmart2 = document.querySelector(".main-smart-button2")
 let card = []
 
 buttonMainSmart1.addEventListener("click", () => {
-  const card = initialCards.filter((item) => { if (item.status === "В наличии") { return true } })
+  const filt = initialCards.filter((item) => { if (item.status === "В наличии") { return true } })
   card = filt
   rendererCard(card)
 })
