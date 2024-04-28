@@ -18,7 +18,7 @@ function createCards(item) {
   const link2 = cardTemplate.querySelector(".link2")
   const link3 = cardTemplate.querySelector(".link3")
   const link4 = cardTemplate.querySelector(".link4")
-  const video = cardTemplate.querySelector(".video")
+  const videoSlide = cardTemplate.querySelector(".video-slide")
   const carouselItem1 = cardTemplate.querySelector(".carousel-item1")
   const carouselItem2 = cardTemplate.querySelector(".carousel-item2")
   const carouselItem3 = cardTemplate.querySelector(".carousel-item3")
@@ -44,7 +44,8 @@ function createCards(item) {
   !item.link2 ? carouselItem2.remove("carousel-item2") : link2.src = item.link2; link2.alt = item.name;
   !item.link3 ? carouselItem3.remove("carousel-item3") : link3.src = item.link3; link3.alt = item.name;
   !item.link4 ? carouselItem4.remove("carousel-item4") : link4.src = item.link4; link4.alt = item.name;
-  !item.video ? carouselItem5.remove("carousel-item5") : video.src = item.video
+  !item.video ? carouselItem5.remove("carousel-item5") : videoSlide.innerHTML =
+    `<iframe class="video" src=${item.video}  frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>`
 
   if (!item.video & !item.link2) {
     carouselControlPrev.remove('carousel-control-prev')
@@ -75,7 +76,6 @@ function createCards(item) {
     discountProc.textContent = "-" + item.discount + "%"; discountProc.classList.add("d-block")
     price.classList.add("price-discount");
     discount.textContent = item.price - (item.price * item.discount / 100) + " ₽"; discount.classList.add("d-block")
-
   }
 
   return cardTemplate;

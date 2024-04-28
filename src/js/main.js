@@ -1,5 +1,5 @@
-import { initialCards } from '../init/cards.js';
-import rendererCard from './renderer.js';
+import { initialCards } from '../content/cards.js';
+import rendererCard from './rendererCard.js';
 
 const inputSearch = document.querySelector(".input-search")
 const buttonSearch = document.querySelector("#button-search")
