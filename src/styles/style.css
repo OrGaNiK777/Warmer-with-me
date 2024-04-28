@@ -64,55 +64,6 @@ a:hover {
 	margin: 0;
 }
 
-@media screen and (width < 500px) {
-	.header_logo_h1 {
-		font-size: 26px;
-	}
-
-	.header_logo_h2 {
-		font-size: 12px;
-	}
-
-	.carousel-item div {
-		height: 400px;
-	}
-
-	.carousel-control-next,
-	.carousel-control-prev {
-		max-height: 400px;
-	}
-
-	.video-slide {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-	}
-
-	.video {
-		height: 400px;
-	}
-
-	.modal-content button {
-		position: absolute;
-		margin-left: 90%;
-		margin-top: 5%;
-	}
-
-	.card {
-		border: none;
-		border-radius: 0;
-		background-color: #f3f1f6;
-		max-width: 400px;
-	}
-
-	.carousel-item img {
-		object-fit: contain;
-		border-radius: 0;
-		height: 400px;
-		width: 100%;
-	}
-}
-
 .header-contact {
 	display: flex;
 	flex-direction: row;
@@ -272,6 +223,89 @@ ul.contact_icons {
 	max-width: 450px;
 }
 
+.main-smart {
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../../img/backgr.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	transition: all 0.5s linear;
+}
+
+.main-smart-visib {
+	visibility: visible;
+	opacity: 1;
+}
+
+.main-smart-button {
+	border: none;
+	font-size: 30px;
+	margin-top: 5px;
+}
+
+.main-smart-button:hover {
+	opacity: 0.5;
+	transition: opacity 0.3s;
+}
+
+@media screen and (width < 500px) {
+	.header_logo_h1 {
+		font-size: 26px;
+	}
+
+	.header_logo_h2 {
+		font-size: 12px;
+	}
+
+	.carousel-item div {
+		height: 400px;
+	}
+
+	.carousel-control-next,
+	.carousel-control-prev {
+		max-height: 400px;
+	}
+
+	.video-slide {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.video {
+		height: 400px;
+	}
+
+	.modal-content button {
+		position: absolute;
+		margin-left: 90%;
+		margin-top: 5%;
+	}
+
+	.card {
+		border: none;
+		border-radius: 0;
+		background-color: #f3f1f6;
+		max-width: 400px;
+		width: 100%;
+	}
+
+	.carousel-item img {
+		object-fit: contain;
+		border-radius: 0;
+		height: 400px;
+		width: 100%;
+	}
+}
+
 @media screen and (width > 500px) {
 	.carousel-item div {
 		height: 550px;
@@ -307,37 +341,4 @@ ul.contact_icons {
 		height: 550px;
 		width: 430px;
 	}
-}
-
-.main-smart {
-	opacity: 0;
-	visibility: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-image: url(../../img/backgr.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	transition: all 0.5s linear;
-}
-
-.main-smart-visib {
-	visibility: visible;
-	opacity: 1;
-}
-
-.main-smart-button {
-	border: none;
-	font-size: 30px;
-	margin-top: 5px;
-}
-
-.main-smart-button:hover {
-	opacity: 0.5;
-	transition: opacity 0.3s;
 }
