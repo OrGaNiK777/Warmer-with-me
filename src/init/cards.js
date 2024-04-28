@@ -17,6 +17,7 @@ export const initialCards = [
     link3: "././img/13.jpg",
     video: "",
     price: "7300",
+    discount: "",
     status: "В наличии",
     id: `${increment()}`
   },
@@ -29,6 +30,7 @@ export const initialCards = [
     link3: "././img/3.jpg",
     video: "",
     price: "6500",
+    discount: "",
     status: "Под заказ",
     id: `${increment()}`
   },
@@ -41,6 +43,7 @@ export const initialCards = [
     link3: "././img/6.jpg",
     video: "",
     price: "6300",
+    discount: "",
     status: "Под заказ",
     id: `${increment()}`
   },
@@ -53,6 +56,7 @@ export const initialCards = [
     link3: "././img/9.jpg",
     video: "",
     price: "4300",
+    discount: "",
     status: "Под заказ", //"Под заказ",
     id: `${increment()}`
   },

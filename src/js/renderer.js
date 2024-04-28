@@ -11,14 +11,15 @@ function createCards(item) {
   const carouselControlPrev = cardTemplate.querySelector('.carousel-control-prev')
   const carouselControlNext = cardTemplate.querySelector('.carousel-control-next')
   const description = cardTemplate.querySelector(".description")
-  const price = cardTemplate.querySelectorAll(".price")
-  const discount = cardTemplate.querySelectorAll(".discount")
-  const discountProc = cardTemplate.querySelectorAll(".discount-proc")
+  const price = cardTemplate.querySelector(".price")
+  const discount = cardTemplate.querySelector(".discount")
+  const discountProc = cardTemplate.querySelector(".discount-proc")
   const link1 = cardTemplate.querySelector(".link1")
   const link2 = cardTemplate.querySelector(".link2")
   const link3 = cardTemplate.querySelector(".link3")
   const link4 = cardTemplate.querySelector(".link4")
   const video = cardTemplate.querySelector(".video")
+  const carouselItem1 = cardTemplate.querySelector(".carousel-item1")
   const carouselItem2 = cardTemplate.querySelector(".carousel-item2")
   const carouselItem3 = cardTemplate.querySelector(".carousel-item3")
   const carouselItem4 = cardTemplate.querySelector(".carousel-item4")
@@ -39,8 +40,7 @@ function createCards(item) {
     status.textContent = item.status
   }
 
-  link1.src = item.link1;
-  link1.alt = item.name;
+  !item.link1 ? carouselItem1.remove("carousel-item1") : link1.src = item.link1; link1.alt = item.name;
   !item.link2 ? carouselItem2.remove("carousel-item2") : link2.src = item.link2; link2.alt = item.name;
   !item.link3 ? carouselItem3.remove("carousel-item3") : link3.src = item.link3; link3.alt = item.name;
   !item.link4 ? carouselItem4.remove("carousel-item4") : link4.src = item.link4; link4.alt = item.name;
@@ -68,15 +68,14 @@ function createCards(item) {
   })
 
   if (item.price) {
-    price.forEach((el) => { el.textContent = item.price + " ₽"; })
-  } else { price.forEach((el) => { el.textContent = "Уточнить лично" }) }
+    price.textContent = item.price + " ₽";
+  } else { price.textContent = "Уточнить лично" }
 
   if (item.discount) {
-    discountProc.forEach(el => { el.textContent = "-" + item.discount + "%"; el.classList.add("d-block") })
-    price.forEach((el) => {
-      el.classList.add("price-discount");
-      discount.forEach(el => { el.textContent = item.price - (item.price * item.discount / 100) + " ₽"; el.classList.add("d-block") })
-    })
+    discountProc.textContent = "-" + item.discount + "%"; discountProc.classList.add("d-block")
+    price.classList.add("price-discount");
+    discount.textContent = item.price - (item.price * item.discount / 100) + " ₽"; discount.classList.add("d-block")
+
   }
 
   return cardTemplate;
