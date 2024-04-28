@@ -41,8 +41,6 @@ function createCards(item) {
     status.textContent = item.status
   }
 
-
-
   if (item.name.length > 19) {
     title.classList.add("col-6")
     description.classList.add("col-6")
@@ -52,8 +50,6 @@ function createCards(item) {
     title.classList.add("col-4")
     description.classList.add("col-8")
   }
-
-
   !item.link1 ? carouselItem1.remove("carousel-item1") : link1.src = item.link1; link1.alt = item.name;
   !item.link2 ? carouselItem2.remove("carousel-item2") : link2.src = item.link2; link2.alt = item.name;
   !item.link3 ? carouselItem3.remove("carousel-item3") : link3.src = item.link3; link3.alt = item.name;
@@ -69,15 +65,12 @@ function createCards(item) {
   link1.addEventListener("click", () => {
     zoomImg.src = item.link1
   })
-
   link2.addEventListener("click", () => {
     zoomImg.src = item.link2
   })
-
   link3.addEventListener("click", () => {
     zoomImg.src = item.link3
   })
-
   link4.addEventListener("click", () => {
     zoomImg.src = item.link4
   })
