@@ -8,6 +8,7 @@ function createCards(item) {
   cardTemplate.querySelector(".description").innerText = item.description;
   cardTemplate.querySelector('.slide').id = item.id;
 
+  const title = cardTemplate.querySelector('.title')
   const carouselControlPrev = cardTemplate.querySelector('.carousel-control-prev')
   const carouselControlNext = cardTemplate.querySelector('.carousel-control-next')
   const description = cardTemplate.querySelector(".description")
@@ -30,15 +31,28 @@ function createCards(item) {
   carouselControlNext.href = "#" + item.id;
 
   if (item.status === "Под заказ") {
-    description.innerText = `Заказ по индивидуальным размерам, 
-    Возможен повтор в любом цвете`
+    !item.description ? description.innerText = `Заказ по индивидуальным размерам, 
+    Возможен повтор в любом цвете`: description.textContent = item.description
     status.classList.add("btn-order")
     status.textContent = item.status
-    if (item.status.le) { }
+
   } else {
     description.innerText = item.description;
     status.textContent = item.status
   }
+
+
+
+  if (item.name.length > 19) {
+    title.classList.add("col-6")
+    description.classList.add("col-6")
+  }
+
+  if (item.name.length < 19) {
+    title.classList.add("col-4")
+    description.classList.add("col-8")
+  }
+
 
   !item.link1 ? carouselItem1.remove("carousel-item1") : link1.src = item.link1; link1.alt = item.name;
   !item.link2 ? carouselItem2.remove("carousel-item2") : link2.src = item.link2; link2.alt = item.name;

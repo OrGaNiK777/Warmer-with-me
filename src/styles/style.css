@@ -159,6 +159,10 @@ ul.contact_icons {
 	font-size: 12px;
 }
 
+.name{
+	font-weight:bold
+}
+
 .price {
 	margin: 0;
 	margin-left: 5px;
