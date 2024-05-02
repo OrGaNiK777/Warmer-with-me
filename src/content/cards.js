@@ -30,7 +30,7 @@ export const initialCards = [{
   link3: "././img/13.jpg",
   video: "",
   price: "7300",
-  discount: "",
+  discount: "10",
   status: "В наличии",
   id: `${increment()}`
 },
@@ -83,7 +83,7 @@ export const initialCards = [{
   link3: "https://sun9-78.userapi.com/impg/DOFxGxKB9m5HAbwHP9cXgINr4TaLtQCgUWNGBw/muLWGvvX3NQ.jpg?size=503x807&quality=95&sign=fca3fa99db30d021b042887ec835e766&c_uniq_tag=baNY_BpHWlh1TDUmpHc0j3nd_w118x9kIT4SC1R8Sj4&type=album",
   video: "",
   price: "6300",
-  discount: "",
+  discount: "10",
   status: "В наличии",
   id: `${increment()}`
 },
