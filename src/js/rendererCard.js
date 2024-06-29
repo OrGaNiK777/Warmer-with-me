@@ -41,15 +41,15 @@ function createCards(item) {
     status.textContent = item.status
   }
 
-  if (item.name.length > 19) {
-    title.classList.add("col-6")
-    description.classList.add("col-6")
-  }
+  // if (item.name.length > 19) {
+  //   title.classList.add("col-6")
+  //   description.classList.add("col-6")
+  // }
 
-  if (item.name.length < 19) {
-    title.classList.add("col-4")
-    description.classList.add("col-8")
-  }
+  // if (item.name.length < 19) {
+  //   title.classList.add("col-6")
+  //   description.classList.add("col-6")
+  // }
   
   !item.link1 ? carouselItem1.remove("carousel-item1") : link1.src = item.link1; link1.alt = item.name;
   !item.link2 ? carouselItem2.remove("carousel-item2") : link2.src = item.link2; link2.alt = item.name;
@@ -77,13 +77,13 @@ function createCards(item) {
   })
 
   if (item.price) {
-    price.textContent = item.price + " ₽";
+    price.textContent = item.price + " ₽ + доставка";
   } else { price.textContent = "Уточнить лично" }
 
   if (item.discount) {
     discountProc.textContent = "-" + item.discount + "%"; discountProc.classList.add("d-block")
     price.classList.add("price-discount");
-    discount.textContent = item.price - (item.price * item.discount / 100) + " ₽"; discount.classList.add("d-block")
+    discount.textContent = item.price - (item.price * item.discount / 100) + " ₽ + доставка"; discount.classList.add("d-block")
   }
 
   return cardTemplate;
