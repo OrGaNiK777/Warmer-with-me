@@ -90,6 +90,7 @@ function createCards(item) {
 }
 
 export default function rendererCard(items) {
+  
   mainSmart.classList.remove("main-smart-visib")
   items.forEach((item) => {
     if (item.name) {

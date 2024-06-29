@@ -4,20 +4,34 @@ import rendererCard from './rendererCard.js';
 const inputSearch = document.querySelector(".input-search")
 const buttonSearch = document.querySelector("#button-search")
 const buttonRemoveSearch = document.querySelector(".button-remove-search")
-const buttonMainSmart1 = document.querySelector(".main-smart-button1")
-const buttonMainSmart2 = document.querySelector(".main-smart-button2")
+const buttonMainSmart0 = document.querySelectorAll(".main-smart-button0")
+const buttonMainSmart1 = document.querySelectorAll(".main-smart-button1")
+const buttonMainSmart2 = document.querySelectorAll(".main-smart-button2")
 let card = []
 
-buttonMainSmart1.addEventListener("click", () => {
-  const filt = initialCards.filter((item) => { if (item.status === "В наличии") { return true } })
-  card = filt
-  rendererCard(card)
+buttonMainSmart0.forEach((i) => {
+  i.addEventListener("click", () => {
+    removeAllCards()
+    rendererCard(initialCards)
+  })
 })
 
-buttonMainSmart2.addEventListener("click", () => {
-  const filt = initialCards.filter(item => { if (item.status === "Под заказ") { return true } })
-  card = filt
-  rendererCard(card)
+buttonMainSmart1.forEach((i) => {
+  i.addEventListener("click", () => {
+    const filt = initialCards.filter((item) => { if (item.status === "В наличии") { return true } })
+    card = filt
+    removeAllCards()
+    rendererCard(card)
+  })
+})
+
+buttonMainSmart2.forEach((i) => {
+  i.addEventListener("click", () => {
+    const filt = initialCards.filter(item => { if (item.status === "Под заказ") { return true } })
+    card = filt
+    removeAllCards()
+    rendererCard(card)
+  })
 })
 
 function search(items, search) {
@@ -52,3 +66,4 @@ buttonSearch.addEventListener("click", () => {
 function removeAllCards() {
   document.querySelectorAll("#cards").forEach((el) => { el.remove("cards") })
 }
+if (window.innerWidth > 500) { rendererCard(initialCards) }

@@ -130,6 +130,7 @@ ul.contact_icons {
 	color: var(--bs-purple);
 	padding-right: 5px;
 	padding-left: 5px;
+	border: none
 }
 
 .availability {
@@ -244,14 +245,9 @@ ul.contact_icons {
 	transition: all 0.5s linear;
 }
 
-.main-smart-visib {
-	visibility: visible;
-	opacity: 1;
-}
-
 .main-smart-button {
 	border: none;
-	font-size: 30px;
+	font-size: 25px;
 	margin-top: 5px;
 }
 
@@ -260,7 +256,12 @@ ul.contact_icons {
 	transition: opacity 0.3s;
 }
 
-@media screen and (width < 500px) {
+@media screen and (width < 501px) {
+	.main-smart-visib {
+		visibility: visible;
+		opacity: 1;
+	}
+
 	.header_logo_h1 {
 		font-size: 26px;
 	}
