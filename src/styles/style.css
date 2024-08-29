@@ -261,7 +261,7 @@ ul.contact_icons {
 		z-index: 0;
 		display: flex;
 		justify-content: center;
-		margin: 0 -5px;
+		margin: 0 0px;
 	}
 
 	.main-smart-visib {
