@@ -18,7 +18,7 @@ export const initialCards = [{
   link4: "",
   video: "",
   price: `9000 ₽`,
-  delivery: "",
+  delivery: "+",
   discount: "",
   status: "В наличии",
   id: `${increment()}`
