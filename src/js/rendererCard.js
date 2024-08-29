@@ -1,6 +1,8 @@
 const zoomImg = document.querySelector(".zoomImg")
 const mainSmart = document.querySelector(".main-smart")
 
+function clear(num) { return Number(num ? num.replace(/\D/g, "") : 0) } // переводит в число и оставляет цифры
+
 function createCards(item) {
   const cardTemplate = document.getElementById("card-template").content.querySelector(".col").cloneNode(true);
   cardTemplate.querySelector(".name").textContent = item.name;
@@ -13,6 +15,7 @@ function createCards(item) {
   const carouselControlNext = cardTemplate.querySelector('.carousel-control-next')
   const description = cardTemplate.querySelector(".description")
   const price = cardTemplate.querySelector(".price")
+  const delivery = cardTemplate.querySelector(".delivery")
   const discount = cardTemplate.querySelector(".discount")
   const discountProc = cardTemplate.querySelector(".discount-proc")
   const link1 = cardTemplate.querySelector(".link1")
@@ -50,7 +53,7 @@ function createCards(item) {
   //   title.classList.add("col-6")
   //   description.classList.add("col-6")
   // }
-  
+
   !item.link1 ? carouselItem1.remove("carousel-item1") : link1.src = item.link1; link1.alt = item.name;
   !item.link2 ? carouselItem2.remove("carousel-item2") : link2.src = item.link2; link2.alt = item.name;
   !item.link3 ? carouselItem3.remove("carousel-item3") : link3.src = item.link3; link3.alt = item.name;
@@ -77,20 +80,24 @@ function createCards(item) {
   })
 
   if (item.price) {
-    price.textContent = item.price + " ₽ + доставка";
+    price.textContent = item.price;
   } else { price.textContent = "Уточнить лично" }
+  
+  if (item.delivery) {
+    delivery.textContent = "+ доставка"
+  }
 
   if (item.discount) {
     discountProc.textContent = "-" + item.discount + "%"; discountProc.classList.add("d-block")
     price.classList.add("price-discount");
-    discount.textContent = item.price - (item.price * item.discount / 100) + " ₽ + доставка"; discount.classList.add("d-block")
+    discount.textContent = clear(item.price) - (clear(item.price) * item.discount / 100) + " ₽"; discount.classList.add("d-block")
   }
 
   return cardTemplate;
 }
 
 export default function rendererCard(items) {
-  
+
   mainSmart.classList.remove("main-smart-visib")
   items.forEach((item) => {
     if (item.name) {
